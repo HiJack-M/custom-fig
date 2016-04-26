@@ -1,0 +1,5 @@
+wiki:
+  image: hydra11/dokuwiki:latest
+  ports:
+    - "8000:80"
+  restart: always

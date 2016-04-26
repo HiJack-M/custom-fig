@@ -1,0 +1,5 @@
+blog:
+  image: drupal
+  ports:
+    - "9000:80"
+  restart: always

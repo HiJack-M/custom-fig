@@ -1,0 +1,7 @@
+apps:
+  - script : /root/Public/btcCalculator/bin/www
+    name   : btcCalculator
+    watch  : true
+    env    :
+      NODE_ENV: production
+      PORT: 9999

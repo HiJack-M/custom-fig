@@ -1,0 +1,12 @@
+mc:
+  image: itzg/minecraft-server:latest
+  ports:
+    - "25565:25565"
+  environment:
+    - EULA=TRUE
+    - JVM_OPTS=-Xmx512M -Xms512M
+  volumes:
+    - ./server-icon.png:/data/server-icon.png
+    - ./config/ops.json:/data/ops.json
+    - ./config/whitelist.json:/data/whitelist.json
+  restart: always

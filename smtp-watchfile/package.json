@@ -1,0 +1,11 @@
+{
+  "name": "smtp-watchfile",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "jovi",
+  "license": "MIT",
+  "dependencies": {
+    "gaze": "^1.1.2",
+    "ssh2-sftp-client": "^2.1.0"
+  }
+}

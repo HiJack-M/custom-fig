@@ -1,0 +1,265 @@
+2017-09-01 09:39:28,273 CRIT Supervisor running as root (no user in config file)
+2017-09-01 09:39:28,273 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-01 09:39:28,292 INFO RPC interface 'supervisor' initialized
+2017-09-01 09:39:28,292 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-01 09:39:28,294 INFO daemonizing the supervisord process
+2017-09-01 09:39:28,294 INFO set current directory: '/tmp'
+2017-09-01 09:39:28,295 INFO supervisord started with pid 2497
+2017-09-01 09:39:29,298 INFO spawned: 'ssserver' with pid 2499
+2017-09-01 09:39:30,548 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-09-01 09:50:35,842 WARN received SIGTERM indicating exit request
+2017-09-01 09:50:35,844 INFO waiting for ssserver to die
+2017-09-01 09:50:35,844 INFO stopped: ssserver (terminated by SIGTERM)
+2017-09-01 09:50:46,081 CRIT Supervisor running as root (no user in config file)
+2017-09-01 09:50:46,082 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-01 09:50:46,093 INFO RPC interface 'supervisor' initialized
+2017-09-01 09:50:46,093 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-01 09:50:46,095 INFO daemonizing the supervisord process
+2017-09-01 09:50:46,095 INFO set current directory: '/tmp'
+2017-09-01 09:50:46,095 INFO supervisord started with pid 808
+2017-09-01 09:50:47,099 INFO spawned: 'ssserver' with pid 811
+2017-09-01 09:50:48,279 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-09-01 10:08:45,334 CRIT Supervisor running as root (no user in config file)
+2017-09-01 10:08:45,334 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-01 10:08:45,354 INFO RPC interface 'supervisor' initialized
+2017-09-01 10:08:45,354 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-01 10:08:45,356 INFO daemonizing the supervisord process
+2017-09-01 10:08:45,357 INFO set current directory: '/tmp'
+2017-09-01 10:08:45,357 INFO supervisord started with pid 813
+2017-09-01 10:08:46,359 INFO spawned: 'ssserver' with pid 816
+2017-09-01 10:08:48,274 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-09-01 10:15:10,763 WARN received SIGTERM indicating exit request
+2017-09-01 10:15:10,763 INFO waiting for ssserver to die
+2017-09-01 10:15:10,767 INFO stopped: ssserver (terminated by SIGTERM)
+2017-09-01 10:15:22,003 CRIT Supervisor running as root (no user in config file)
+2017-09-01 10:15:22,003 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-01 10:15:22,024 INFO RPC interface 'supervisor' initialized
+2017-09-01 10:15:22,024 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-01 10:15:22,026 INFO daemonizing the supervisord process
+2017-09-01 10:15:22,027 INFO set current directory: '/tmp'
+2017-09-01 10:15:22,027 INFO supervisord started with pid 812
+2017-09-01 10:15:23,029 INFO spawned: 'ssserver' with pid 814
+2017-09-01 10:15:24,191 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-09-03 10:32:24,496 WARN received SIGTERM indicating exit request
+2017-09-03 10:32:24,497 INFO waiting for ssserver to die
+2017-09-03 10:32:24,509 INFO stopped: ssserver (terminated by SIGTERM)
+2017-09-03 10:32:35,920 CRIT Supervisor running as root (no user in config file)
+2017-09-03 10:32:35,921 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-03 10:32:35,945 INFO RPC interface 'supervisor' initialized
+2017-09-03 10:32:35,945 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-03 10:32:35,947 INFO daemonizing the supervisord process
+2017-09-03 10:32:35,948 INFO set current directory: '/tmp'
+2017-09-03 10:32:35,948 INFO supervisord started with pid 951
+2017-09-03 10:32:36,958 INFO spawned: 'ssserver' with pid 1038
+2017-09-03 10:32:38,314 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-09-10 21:29:57,672 WARN received SIGTERM indicating exit request
+2017-09-10 21:29:57,675 INFO waiting for ssserver to die
+2017-09-10 21:29:57,677 INFO stopped: ssserver (terminated by SIGTERM)
+2017-09-10 21:30:09,479 CRIT Supervisor running as root (no user in config file)
+2017-09-10 21:30:09,479 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-10 21:30:09,494 INFO RPC interface 'supervisor' initialized
+2017-09-10 21:30:09,494 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-10 21:30:09,496 INFO daemonizing the supervisord process
+2017-09-10 21:30:09,496 INFO set current directory: '/tmp'
+2017-09-10 21:30:09,497 INFO supervisord started with pid 953
+2017-09-10 21:30:10,504 INFO spawned: 'ssserver' with pid 1064
+2017-09-10 21:30:11,821 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-09-27 16:48:50,961 CRIT Supervisor running as root (no user in config file)
+2017-09-27 16:48:50,961 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-09-27 16:48:50,976 INFO RPC interface 'supervisor' initialized
+2017-09-27 16:48:50,976 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-09-27 16:48:50,979 INFO daemonizing the supervisord process
+2017-09-27 16:48:50,979 INFO set current directory: '/tmp'
+2017-09-27 16:48:50,980 INFO supervisord started with pid 948
+2017-09-27 16:48:52,008 INFO spawned: 'ssserver' with pid 994
+2017-09-27 16:48:53,407 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-07 15:22:47,203 CRIT Supervisor running as root (no user in config file)
+2017-10-07 15:22:47,203 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-07 15:22:47,222 INFO RPC interface 'supervisor' initialized
+2017-10-07 15:22:47,222 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-07 15:22:47,228 INFO daemonizing the supervisord process
+2017-10-07 15:22:47,228 INFO set current directory: '/tmp'
+2017-10-07 15:22:47,228 INFO supervisord started with pid 1031
+2017-10-07 15:22:48,233 INFO spawned: 'ssserver' with pid 1179
+2017-10-07 15:22:49,570 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-17 03:20:15,036 CRIT Supervisor running as root (no user in config file)
+2017-10-17 03:20:15,037 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-17 03:20:15,053 INFO RPC interface 'supervisor' initialized
+2017-10-17 03:20:15,053 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-17 03:20:15,055 INFO daemonizing the supervisord process
+2017-10-17 03:20:15,055 INFO set current directory: '/tmp'
+2017-10-17 03:20:15,055 INFO supervisord started with pid 948
+2017-10-17 03:20:16,058 INFO spawned: 'ssserver' with pid 997
+2017-10-17 03:20:17,539 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-17 03:25:29,381 CRIT Supervisor running as root (no user in config file)
+2017-10-17 03:25:29,381 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-17 03:25:29,409 INFO RPC interface 'supervisor' initialized
+2017-10-17 03:25:29,409 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-17 03:25:29,412 INFO daemonizing the supervisord process
+2017-10-17 03:25:29,413 INFO set current directory: '/tmp'
+2017-10-17 03:25:29,413 INFO supervisord started with pid 1026
+2017-10-17 03:25:30,416 INFO spawned: 'ssserver' with pid 1167
+2017-10-17 03:25:31,666 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-23 02:25:45,610 CRIT Supervisor running as root (no user in config file)
+2017-10-23 02:25:45,610 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-23 02:25:45,632 INFO RPC interface 'supervisor' initialized
+2017-10-23 02:25:45,632 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-23 02:25:45,633 INFO daemonizing the supervisord process
+2017-10-23 02:25:45,634 INFO set current directory: '/tmp'
+2017-10-23 02:25:45,634 INFO supervisord started with pid 950
+2017-10-23 02:25:46,635 INFO spawned: 'ssserver' with pid 1118
+2017-10-23 02:25:47,889 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-24 04:57:59,147 CRIT Supervisor running as root (no user in config file)
+2017-10-24 04:57:59,148 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-24 04:57:59,165 INFO RPC interface 'supervisor' initialized
+2017-10-24 04:57:59,165 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-24 04:57:59,167 INFO daemonizing the supervisord process
+2017-10-24 04:57:59,168 INFO set current directory: '/tmp'
+2017-10-24 04:57:59,168 INFO supervisord started with pid 950
+2017-10-24 04:58:00,174 INFO spawned: 'ssserver' with pid 1034
+2017-10-24 04:58:01,662 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-26 14:30:00,825 CRIT Supervisor running as root (no user in config file)
+2017-10-26 14:30:00,826 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-26 14:30:00,840 INFO RPC interface 'supervisor' initialized
+2017-10-26 14:30:00,840 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-26 14:30:00,845 INFO daemonizing the supervisord process
+2017-10-26 14:30:00,845 INFO set current directory: '/tmp'
+2017-10-26 14:30:00,846 INFO supervisord started with pid 947
+2017-10-26 14:30:01,849 INFO spawned: 'ssserver' with pid 1001
+2017-10-26 14:30:02,303 INFO exited: ssserver (exit status 1; not expected)
+2017-10-26 14:30:03,306 INFO spawned: 'ssserver' with pid 1211
+2017-10-26 14:30:03,641 INFO exited: ssserver (exit status 1; not expected)
+2017-10-26 14:30:05,646 INFO spawned: 'ssserver' with pid 1253
+2017-10-26 14:30:05,917 INFO exited: ssserver (exit status 1; not expected)
+2017-10-26 14:30:08,922 INFO spawned: 'ssserver' with pid 1345
+2017-10-26 14:30:09,159 INFO exited: ssserver (exit status 1; not expected)
+2017-10-26 14:30:10,160 INFO gave up: ssserver entered FATAL state, too many start retries too quickly
+2017-10-26 14:34:10,997 CRIT Supervisor running as root (no user in config file)
+2017-10-26 14:34:10,998 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-26 14:34:11,017 INFO RPC interface 'supervisor' initialized
+2017-10-26 14:34:11,017 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-26 14:34:11,019 INFO daemonizing the supervisord process
+2017-10-26 14:34:11,020 INFO set current directory: '/tmp'
+2017-10-26 14:34:11,020 INFO supervisord started with pid 947
+2017-10-26 14:34:12,023 INFO spawned: 'ssserver' with pid 1029
+2017-10-26 14:34:13,263 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 04:33:06,855 CRIT Supervisor running as root (no user in config file)
+2017-10-31 04:33:06,857 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 04:33:06,933 INFO RPC interface 'supervisor' initialized
+2017-10-31 04:33:06,934 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 04:33:06,942 INFO daemonizing the supervisord process
+2017-10-31 04:33:06,943 INFO set current directory: '/tmp'
+2017-10-31 04:33:06,943 INFO supervisord started with pid 996
+2017-10-31 04:33:07,947 INFO spawned: 'ssserver' with pid 1165
+2017-10-31 04:33:09,316 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 04:35:40,731 CRIT Supervisor running as root (no user in config file)
+2017-10-31 04:35:40,732 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 04:35:40,748 INFO RPC interface 'supervisor' initialized
+2017-10-31 04:35:40,748 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 04:35:40,750 INFO daemonizing the supervisord process
+2017-10-31 04:35:40,750 INFO set current directory: '/tmp'
+2017-10-31 04:35:40,750 INFO supervisord started with pid 948
+2017-10-31 04:35:41,755 INFO spawned: 'ssserver' with pid 1031
+2017-10-31 04:35:43,196 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 11:49:48,007 CRIT Supervisor running as root (no user in config file)
+2017-10-31 11:49:48,007 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 11:49:48,027 INFO RPC interface 'supervisor' initialized
+2017-10-31 11:49:48,028 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 11:49:48,029 INFO daemonizing the supervisord process
+2017-10-31 11:49:48,029 INFO set current directory: '/tmp'
+2017-10-31 11:49:48,030 INFO supervisord started with pid 949
+2017-10-31 11:49:49,032 INFO spawned: 'ssserver' with pid 1032
+2017-10-31 11:49:50,324 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 14:00:02,034 CRIT Supervisor running as root (no user in config file)
+2017-10-31 14:00:02,043 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 14:00:02,066 INFO RPC interface 'supervisor' initialized
+2017-10-31 14:00:02,066 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 14:00:02,071 INFO daemonizing the supervisord process
+2017-10-31 14:00:02,071 INFO set current directory: '/tmp'
+2017-10-31 14:00:02,071 INFO supervisord started with pid 996
+2017-10-31 14:00:03,076 INFO spawned: 'ssserver' with pid 1163
+2017-10-31 14:00:04,465 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 14:26:12,242 CRIT Supervisor running as root (no user in config file)
+2017-10-31 14:26:12,244 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 14:26:12,258 INFO RPC interface 'supervisor' initialized
+2017-10-31 14:26:12,258 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 14:26:12,262 INFO daemonizing the supervisord process
+2017-10-31 14:26:12,263 INFO set current directory: '/tmp'
+2017-10-31 14:26:12,264 INFO supervisord started with pid 1010
+2017-10-31 14:26:13,266 INFO spawned: 'ssserver' with pid 1170
+2017-10-31 14:26:14,476 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 15:24:32,278 INFO waiting for ssserver to die
+2017-10-31 15:24:32,279 INFO stopped: ssserver (terminated by SIGTERM)
+2017-10-31 15:24:32,284 CRIT Supervisor running as root (no user in config file)
+2017-10-31 15:24:32,284 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 15:24:32,285 INFO RPC interface 'supervisor' initialized
+2017-10-31 15:24:32,285 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 15:24:32,285 INFO supervisord started with pid 1010
+2017-10-31 15:24:33,293 INFO spawned: 'ssserver' with pid 4092
+2017-10-31 15:24:34,470 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-10-31 15:37:23,951 CRIT Supervisor running as root (no user in config file)
+2017-10-31 15:37:23,955 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-10-31 15:37:24,042 INFO RPC interface 'supervisor' initialized
+2017-10-31 15:37:24,042 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-10-31 15:37:24,046 INFO daemonizing the supervisord process
+2017-10-31 15:37:24,046 INFO set current directory: '/tmp'
+2017-10-31 15:37:24,047 INFO supervisord started with pid 996
+2017-10-31 15:37:25,050 INFO spawned: 'ssserver' with pid 1160
+2017-10-31 15:37:26,418 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-11-02 14:56:45,908 CRIT Supervisor running as root (no user in config file)
+2017-11-02 14:56:45,908 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-11-02 14:56:45,924 INFO RPC interface 'supervisor' initialized
+2017-11-02 14:56:45,924 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-11-02 14:56:45,926 INFO daemonizing the supervisord process
+2017-11-02 14:56:45,927 INFO set current directory: '/tmp'
+2017-11-02 14:56:45,927 INFO supervisord started with pid 946
+2017-11-02 14:56:46,930 INFO spawned: 'ssserver' with pid 1044
+2017-11-02 14:56:48,394 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-11-07 16:07:32,515 CRIT Supervisor running as root (no user in config file)
+2017-11-07 16:07:32,515 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-11-07 16:07:32,531 INFO RPC interface 'supervisor' initialized
+2017-11-07 16:07:32,532 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-11-07 16:07:32,533 INFO daemonizing the supervisord process
+2017-11-07 16:07:32,533 INFO set current directory: '/tmp'
+2017-11-07 16:07:32,533 INFO supervisord started with pid 949
+2017-11-07 16:07:33,536 INFO spawned: 'ssserver' with pid 992
+2017-11-07 16:07:35,138 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-11-12 10:26:56,228 CRIT Supervisor running as root (no user in config file)
+2017-11-12 10:26:56,232 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-11-12 10:26:56,249 INFO RPC interface 'supervisor' initialized
+2017-11-12 10:26:56,249 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-11-12 10:26:56,250 INFO daemonizing the supervisord process
+2017-11-12 10:26:56,250 INFO set current directory: '/tmp'
+2017-11-12 10:26:56,250 INFO supervisord started with pid 948
+2017-11-12 10:26:57,256 INFO spawned: 'ssserver' with pid 1003
+2017-11-12 10:26:58,622 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-11-21 15:27:38,269 CRIT Supervisor running as root (no user in config file)
+2017-11-21 15:27:38,270 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-11-21 15:27:38,288 INFO RPC interface 'supervisor' initialized
+2017-11-21 15:27:38,288 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-11-21 15:27:38,295 INFO daemonizing the supervisord process
+2017-11-21 15:27:38,295 INFO set current directory: '/tmp'
+2017-11-21 15:27:38,295 INFO supervisord started with pid 946
+2017-11-21 15:27:39,300 INFO spawned: 'ssserver' with pid 1104
+2017-11-21 15:27:40,698 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-11-22 01:39:40,846 WARN received SIGTERM indicating exit request
+2017-11-22 01:39:40,847 INFO waiting for ssserver to die
+2017-11-22 01:39:40,931 INFO stopped: ssserver (terminated by SIGTERM)
+2017-11-22 01:39:55,138 CRIT Supervisor running as root (no user in config file)
+2017-11-22 01:39:55,139 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-11-22 01:39:55,155 INFO RPC interface 'supervisor' initialized
+2017-11-22 01:39:55,155 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-11-22 01:39:55,157 INFO daemonizing the supervisord process
+2017-11-22 01:39:55,158 INFO set current directory: '/tmp'
+2017-11-22 01:39:55,158 INFO supervisord started with pid 940
+2017-11-22 01:39:56,162 INFO spawned: 'ssserver' with pid 1047
+2017-11-22 01:39:57,563 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2017-12-04 14:48:19,309 CRIT Supervisor running as root (no user in config file)
+2017-12-04 14:48:19,311 INFO Included extra file "/root/fig/supervisor/conf.d/ssserver.conf" during parsing
+2017-12-04 14:48:19,328 INFO RPC interface 'supervisor' initialized
+2017-12-04 14:48:19,328 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2017-12-04 14:48:19,329 INFO daemonizing the supervisord process
+2017-12-04 14:48:19,329 INFO set current directory: '/tmp'
+2017-12-04 14:48:19,329 INFO supervisord started with pid 948
+2017-12-04 14:48:20,333 INFO spawned: 'ssserver' with pid 1053
+2017-12-04 14:48:21,710 INFO success: ssserver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
