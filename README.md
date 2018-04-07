@@ -12,7 +12,7 @@ Good reference from [kev++](https://github.com/vimagick) with his smart [dockerf
 - [ ] Monitor
 - [ ] Backup
 - [ ] Load Balance
-- [ ] Cluster
+- [x] Cluster
 - [ ] Process manager
 - [ ] Develop file watchman
 
