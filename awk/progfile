@@ -1,0 +1,63 @@
+BEGIN {
+    print "Name    RATE    HOURS"; print ""
+}
+# below print nothing which not occupy new line
+{ print }
+
+{
+    printf("\ntotal pay for %s is $%.2f\n", $1, $2 * $3)
+}
+
+{
+    printf("%-8s $%6.2f\n", $1, $2 * $3)
+}
+
+$3 > 0 {
+    # [NR] print ordinary line number
+    print "[" NR "]",
+
+    # [NF] print number of each row fields
+    "fields count is", NF",",
+    "total pay for", $1, "is", $2 * $3",",
+
+    # [$NF] print last field
+    "last filed is", $NF
+}
+
+$2 >= 4 && $3 >= 20 {
+    printf("good staff is %s\n", $1)
+}
+
+# statistics some variables which show after [END]
+$3 > 15 {
+    # variable emp default value is [0], not explicitly init
+    emp = emp + 1
+}
+
+{ pay = pay + $2 * $3  }
+
+# set array line push each row context
+{ line[NR] = $0  }
+
+END {
+    print "";
+    print NR, "employees"
+    print "total pay is", pay
+    print "average pay is", pay/NR
+    print emp, "employees worked more than 15 hours"
+    print "";
+
+    print "array reverse print:"
+    i = NR
+    while (i > 0) {
+        print line[i]
+        i = i - 1
+    }
+}
+
+# verify condition
+NF != 3     { print $0, "number of fields is not equal to 3"  }
+$2 < 3.35   { print $0, "rate is below minimum wage"  }
+$2 > 10     { print $0, "rate exceeds $10 per hour"  }
+$3 < 0      { print $0, "negative hours worked"  }
+$3 > 60     { print $0, "too many hours worked"  }

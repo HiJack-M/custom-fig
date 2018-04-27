@@ -1,4 +1,4 @@
-# Custom dockerfiles
+# Custom fig
 
 Personal dependencies docker image files, daemon service and tool scripts, custom :)
 
@@ -15,20 +15,21 @@ Good reference from [kev++](https://github.com/vimagick) with his smart [dockerf
 - [x] Cluster
 - [ ] Process manager
 - [ ] Develop file watchman
+- [x] Linux AWK
 
 
 ## Dependency
 
-### [Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/)
 
-### [Nginx](https://nginx.org/en/)
+- [Nginx](https://nginx.org/en/)
 
-### [DokuWiki](https://www.dokuwiki.org/dokuwiki#)
+- [DokuWiki](https://www.dokuwiki.org/dokuwiki#)
 
-### [Drupal](https://www.drupal.org/)
+- [Drupal](https://www.drupal.org/)
 
 
-## Plan
+## TODO Plan
 
 - Backup
   Google API which upload file and fold to Google Cloud
