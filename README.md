@@ -1,6 +1,6 @@
 # Custom fig
 
-Personal dependencies docker image files, daemon service and tool scripts, custom :)
+Personal dependencies docker image files, daemon service, toolkit and scripts, customer :)
 
 Good reference from [kev++](https://github.com/vimagick) with his smart [dockerfiles](https://github.com/vimagick/dockerfiles)
 
@@ -15,7 +15,6 @@ Good reference from [kev++](https://github.com/vimagick) with his smart [dockerf
 - [x] Cluster
 - [ ] Process manager
 - [ ] Develop file watchman
-- [x] Linux AWK
 
 
 ## Dependency
