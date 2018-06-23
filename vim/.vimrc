@@ -1,4 +1,4 @@
-" vundle {
+" Vundle {
     set nocompatible              " be iMproved, required
     filetype off                  " required
     set rtp+=~/.vim/bundle/Vundle.vim
@@ -21,10 +21,12 @@
     Plugin 'plasticboy/vim-markdown'
     Bundle 'solarnz/thrift.vim'
 
+    " [doc address](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/)
+    Plugin 'godlygeek/tabular'
     Plugin 'terryma/vim-multiple-cursors'
     Plugin 'haya14busa/incsearch.vim'
+    Plugin 'henrik/vim-indexed-search'
     Plugin 'ctrlpvim/ctrlp.vim'
-    Plugin 'godlygeek/tabular'
 
     call vundle#end()
 " }
@@ -50,6 +52,7 @@
     set showcmd
     set showmatch
     set magic
+
     set softtabstop=4
     set shiftwidth=4
     set whichwrap=b,s,<,>,[,]
@@ -57,11 +60,13 @@
     set sidescroll=5
     set so=5
     set expandtab
+
+    set hls 
+    set incsearch
+    set smartcase
     set cursorcolumn
     set cursorline
-    set incsearch
     set backupext=.bak
-    set hls 
     " set cc=80
     set regexpengine=1
     set clipboard=unnamed
@@ -73,6 +78,7 @@
     set encoding=utf-8
     set background=dark
     colorscheme gruvbox
+
     syntax on
     if &t_Co > 1
         syntax enable
@@ -109,17 +115,6 @@
     " resolve conflict, disable [Syntastic] and [Eclim]
     let g:syntastic_java_checkers = []
     let g:EclimFileTypeValidate = 0
-
-"     function! MyTabFunction ()
-"         let line = getline('.')
-"         let substr = strpart(line, -1, col('.')+1)
-"         let substr = matchstr(substr, "[^ \t]*$")
-"         if strlen(substr) == 0
-"             return "\<tab>"
-"         endif
-"         return pumvisible() ? "\<c-n>" : "\<c-x>\<c-o>"
-"     endfunction
-"     inoremap <tab> <c-r>=MyTabFunction()<cr>
 " }
 
 
@@ -129,7 +124,7 @@
 " }
 
 
-" vim-javascript
+" vim-javascript > jsx-improve
 " {
     " conflict with jsx-improve, consider confirm reason
     " let g:javascript_plugin_jsdoc = 1
@@ -289,22 +284,25 @@
     " map \[ i[<Esc>ea]<Esc>
     " map \" i"<Esc>ea"<Esc>
     " map \' i'<Esc>ea'<Esc>
+    
+    map ,c :%s///gn <CR>
     map gm :call cursor(0, len(getline('.'))/2) <CR>
+    map EE :e! <CR>
+
+    " indent space
     map fd :set fdm=indent<CR>
     map FG :set shiftwidth=2<CR>:set softtabstop=2<CR>
     map FGG :set shiftwidth=4<CR>:set softtabstop=4<CR>
-    map EE :e! <CR>
 
     " NERDTREE persist only one
     map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
-    " map tabe
     map tb :tabe . <CR>
     " map tn :tabnew **/
 " }
 
 
-" xml format
+" XML format
 " {
     au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 " }
@@ -320,7 +318,7 @@
 " }
 
 
-" script - tabline - format
+" Script - tabline - format
 " Rename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
 " {
