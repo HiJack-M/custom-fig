@@ -1,37 +1,3 @@
-" Vundle {
-    set nocompatible              " be iMproved, required
-    filetype off                  " required
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
-
-    Plugin 'VundleVim/Vundle.vim'
-    Plugin 'Valloric/YouCompleteMe'
-    Plugin 'flazz/vim-colorschemes'
-    Plugin 'tpope/vim-obsession'
-    Bundle 'jistr/vim-nerdtree-tabs'
-
-    Bundle 'moll/vim-node'
-    Plugin 'chemzqm/vim-jsx-improve'
-    Plugin 'maksimr/vim-jsbeautify'
-    Plugin 'posva/vim-vue'
-    Plugin 'mattn/emmet-vim'
-
-    Plugin 'chemzqm/wxapp.vim'
-    Plugin 'chr4/nginx.vim'
-    Plugin 'plasticboy/vim-markdown'
-    Bundle 'solarnz/thrift.vim'
-
-    " [doc address](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/)
-    Plugin 'godlygeek/tabular'
-    Plugin 'terryma/vim-multiple-cursors'
-    Plugin 'haya14busa/incsearch.vim'
-    Plugin 'henrik/vim-indexed-search'
-    Plugin 'ctrlpvim/ctrlp.vim'
-
-    call vundle#end()
-" }
-
-
 " vim-pathogen
 " {
     execute pathogen#infect()
@@ -67,7 +33,6 @@
     set cursorcolumn
     set cursorline
     set backupext=.bak
-    " set cc=80
     set regexpengine=1
     set clipboard=unnamed
     set laststatus=2
@@ -84,10 +49,26 @@
         syntax enable
     endif
 
-    " change <Leader>
     let mapleader=" "
     let Tlist_Show_One_File=1
     let Tlist_Exit_OnlyWindow=1
+" }
+
+
+" vim-syntastic
+" {
+    " set statusline+=%#warningmsg#
+    " set statusline+=%{SyntasticStatuslineFlag()}
+    " set statusline+=%*
+
+    " let g:syntastic_always_populate_loc_list = 1
+    " let g:syntastic_auto_loc_list = 1
+    " let g:syntastic_check_on_open = 1
+    " let g:syntastic_check_on_wq = 0 
+
+    " let g:syntastic_python_checkers = ['pylint']
+    " let g:syntastic_javascript_checkers = ['eslint']
+    " let g:syntastic_javascript_eslint_exe = 'yarn lint --'
 " }
 
 
@@ -147,8 +128,6 @@
     let g:javascript_conceal_static               = "•"
     let g:javascript_conceal_super                = "Ω"
     let g:javascript_conceal_arrow_function       = "⇒"
-    let g:javascript_conceal_noarg_arrow_function = "🞅"
-    let g:javascript_conceal_underscore_arrow_function = "🞅"
     set conceallevel=1
 " }
 
