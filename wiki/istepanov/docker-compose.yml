@@ -1,7 +1,0 @@
-wiki:
-  image: hydra11/alpine-dokuwiki:latest
-  ports:
-    - "8080:80"
-  volumes_from:
-    - dokuwiki-data
-  restart: always
