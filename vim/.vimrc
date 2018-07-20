@@ -13,8 +13,6 @@
     set autoindent
     set smartindent
     set cindent
-    set ruler
-    set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
     set showcmd
     set showmatch
     set magic
@@ -42,6 +40,8 @@
     set termencoding=utf-8
     set encoding=utf-8
     set background=dark
+    set previewheight=25    " vim-fugitive > GStatus height
+
     colorscheme gruvbox
 
     syntax on
@@ -55,23 +55,6 @@
 " }
 
 
-" vim-syntastic
-" {
-    " set statusline+=%#warningmsg#
-    " set statusline+=%{SyntasticStatuslineFlag()}
-    " set statusline+=%*
-
-    " let g:syntastic_always_populate_loc_list = 1
-    " let g:syntastic_auto_loc_list = 1
-    " let g:syntastic_check_on_open = 1
-    " let g:syntastic_check_on_wq = 0 
-
-    " let g:syntastic_python_checkers = ['pylint']
-    " let g:syntastic_javascript_checkers = ['eslint']
-    " let g:syntastic_javascript_eslint_exe = 'yarn lint --'
-" }
-
-
 " NERDTREE
 " {
     autocmd vimenter * NERDTree
@@ -82,6 +65,15 @@
     let NERDTreeShowHidden=1
     let g:NERDTreeWinPos = "left"
     let g:NERDTreeWinSize = 20
+" }
+
+
+" vim-airline
+" {
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#left_sep = ' '
+    let g:airline#extensions#tabline#left_alt_sep = '|'
+    let g:airline#extensions#tabline#formatter = 'default'
 " }
 
 
@@ -256,14 +248,14 @@
 " }
 
 
+" XML format
+" {
+    au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+" }
+
+
 " common useful shortcut
 " {
-    " map \( i(<Esc>ea)<Esc>
-    " map \{ i{<Esc>ea}<Esc>
-    " map \[ i[<Esc>ea]<Esc>
-    " map \" i"<Esc>ea"<Esc>
-    " map \' i'<Esc>ea'<Esc>
-    
     map ,c :%s///gn <CR>
     map gm :call cursor(0, len(getline('.'))/2) <CR>
     map EE :e! <CR>
@@ -277,23 +269,6 @@
     map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
     map tb :tabe . <CR>
-    " map tn :tabnew **/
-" }
-
-
-" XML format
-" {
-    au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
-" }
-
-
-" moving around in command mode
-" {
-    " cnoremap <c-h> <left>
-    " cnoremap <c-j> <down>
-    " cnoremap <c-k> <up>
-    " cnoremap <c-l> <right>
-    " cnoremap ^     <home>
 " }
 
 
@@ -301,47 +276,47 @@
 " Rename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
 " {
-    if exists("+showtabline")
-        function! MyTabLine()
-            let s = ''
-            let wn = ''
-            let t = tabpagenr()
-            let i = 1
-            while i <= tabpagenr('$')
-                let buflist = tabpagebuflist(i)
-                let winnr = tabpagewinnr(i)
-                let s .= '%' . i . 'T'
-                let s .= (i == t ? '%1*' : '%2*')
-                let s .= ' '
-                let wn = tabpagewinnr(i,'$')
+    " if exists("+showtabline")
+    "     function! MyTabLine()
+    "         let s = ''
+    "         let wn = ''
+    "         let t = tabpagenr()
+    "         let i = 1
+    "         while i <= tabpagenr('$')
+    "             let buflist = tabpagebuflist(i)
+    "             let winnr = tabpagewinnr(i)
+    "             let s .= '%' . i . 'T'
+    "             let s .= (i == t ? '%1*' : '%2*')
+    "             let s .= ' '
+    "             let wn = tabpagewinnr(i,'$')
 
-                let s .= '%#TabNum#'
-                let s .= i
-                " let s .= '%*'
-                let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
-                let bufnr = buflist[winnr - 1]
-                let file = bufname(bufnr)
-                let buftype = getbufvar(bufnr, 'buftype')
-                if buftype == 'nofile'
-                    if file =~ '\/.'
-                        let file = substitute(file, '.*\/\ze.', '', '')
-                    endif
-                else
-                    let file = fnamemodify(file, ':p:t')
-                endif
-                if file == ''
-                    let file = '[No Name]'
-                endif
-                let s .= ' ' . file . ' '
-                let i = i + 1
-            endwhile
-            let s .= '%T%#TabLineFill#%='
-            let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
-            return s
-        endfunction
-        set stal=2
-        set tabline=%!MyTabLine()
-        set showtabline=1
-        highlight link TabNum Special
-    endif
+    "             let s .= '%#TabNum#'
+    "             let s .= i
+    "             " let s .= '%*'
+    "             let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+    "             let bufnr = buflist[winnr - 1]
+    "             let file = bufname(bufnr)
+    "             let buftype = getbufvar(bufnr, 'buftype')
+    "             if buftype == 'nofile'
+    "                 if file =~ '\/.'
+    "                     let file = substitute(file, '.*\/\ze.', '', '')
+    "                 endif
+    "             else
+    "                 let file = fnamemodify(file, ':p:t')
+    "             endif
+    "             if file == ''
+    "                 let file = '[No Name]'
+    "             endif
+    "             let s .= ' ' . file . ' '
+    "             let i = i + 1
+    "         endwhile
+    "         let s .= '%T%#TabLineFill#%='
+    "         let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+    "         return s
+    "     endfunction
+    "     set stal=2
+    "     set tabline=%!MyTabLine()
+    "     set showtabline=1
+    "     highlight link TabNum Special
+    " endif
 " }

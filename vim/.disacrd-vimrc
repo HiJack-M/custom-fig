@@ -1,0 +1,44 @@
+" settings
+" {
+    " set ruler
+    " set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+" }
+
+
+" vim-syntastic
+" {
+    " set statusline+=%#warningmsg#
+    " set statusline+=%{SyntasticStatuslineFlag()}
+    " set statusline+=%*
+
+    " let g:syntastic_always_populate_loc_list = 1
+    " let g:syntastic_auto_loc_list = 1
+    " let g:syntastic_check_on_open = 1
+    " let g:syntastic_check_on_wq = 0 
+
+    " let g:syntastic_python_checkers = ['pylint']
+    " let g:syntastic_javascript_checkers = ['eslint']
+    " let g:syntastic_javascript_eslint_exe = 'yarn lint --'
+" }
+
+" common useful shortcut
+" {
+    " map \( i(<Esc>ea)<Esc>
+    " map \{ i{<Esc>ea}<Esc>
+    " map \[ i[<Esc>ea]<Esc>
+    " map \" i"<Esc>ea"<Esc>
+    " map \' i'<Esc>ea'<Esc>
+     
+    " map tn :tabnew **/
+" }
+ 
+
+" moving around in command mode
+" {
+    " cnoremap <c-h> <left>
+    " cnoremap <c-j> <down>
+    " cnoremap <c-k> <up>
+    " cnoremap <c-l> <right>
+    " cnoremap ^     <home>
+" }
+
