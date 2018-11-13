@@ -1,10 +1,10 @@
-# Custom fig
+# Custom Fig
 
 Personal dependencies docker image files, daemon service, toolkit and scripts, customer :)
 
 Good reference from [kev++](https://github.com/vimagick) with his smart [dockerfiles](https://github.com/vimagick/dockerfiles)
 
-## List
+## Todo List
 
 - [x] [Blog](./blog)
 - [x] [Wiki](./wiki)
@@ -15,26 +15,30 @@ Good reference from [kev++](https://github.com/vimagick) with his smart [dockerf
 - [x] Cluster
 - [ ] Process manager
 - [ ] Develop file watchman
+- [ ] [Git Flow](./git-flow/README.md)
 
 
 ## Dependency
 
-- [Docker](https://www.docker.com/)
+### [Docker](https://www.docker.com/)
 
-- [Nginx](https://nginx.org/en/)
+### [Nginx](https://nginx.org/en/)
 
-- [DokuWiki](https://www.dokuwiki.org/dokuwiki#)
+### [DokuWiki](https://www.dokuwiki.org/dokuwiki#)
 
-- [Drupal](https://www.drupal.org/)
+### [Drupal](https://www.drupal.org/)
 
 
-## TODO Plan
+## Wanted
 
-- Backup
+### Backup
+
   Google API which upload file and fold to Google Cloud
 
-- Load Balance
+### Load Balance
+
   Nginx Load Balance or Kubernetes Services
 
-- Cluster
+### Cluster
+
   Build multiple serve as entry using kubernetes.
