@@ -43,7 +43,7 @@ Gitflow Workflow 是基于 Git 人为设计的工作流程，为每个分支提�
 
 ### 获取扩展工具
 
-该设计经过企业项目实践，可以适用于不同技术领域的团队协作，针对 Web 前端而言，考虑到开发中与 Git 交互的场景性，建议使用 Shell 封装的命令行工具 [nvie/gitflow](https://github.com/nvie/gitflow)，该工具仅为 Git 本身的扩展，并没有破坏其原有设计结构和浸入式的概念。
+该设计经过企业项目实践，可以适用于不同技术领域的团队协作，针对 Web 前端而言，考虑到开发中与 Git 交互的场景性，建议使用 Shell 封装的命令行工具 [nvie/gitflow](https://github.com/nvie/gitflow)，该工具仅为 Git 本身的扩展，并没有破坏其原有设计结构和侵入式的概念。
 
 官方提供了不同操作系统平台下的集成方案 [Github - gitflow/Installation](https://github.com/nvie/gitflow/wiki/Installation)，以下直接给出获取方式，Linux 平台请自行参考链接。
 
@@ -245,7 +245,7 @@ Gitflow 即为本文主要推荐的企业团队协作流程方案，该流程围
 
 #### Forking Workflow
 
-改模式较为特殊，每个开发者不仅拥有 remote server 的仓库概念，自己也拥有一个 private remote server，每次集成是本地仓库，private remote server 和 remote server 三者进行交互。
+该模式较为特殊，每个开发者不仅拥有 remote server 的仓库概念，自己也拥有一个 private remote server，每次集成是本地仓库，private remote server 和 remote server 三者进行交互。
 
 
 ## Commitizen
