@@ -318,6 +318,8 @@ npm i -g standard-version
 
 直接通过命令行运行即可。
 
+[注意需要跳过的 tag 阶段](https://github.com/devdigital/git-flow-standard-version)
+
 ### 使用 standard-version
 
 我们会发现，开发成员每次提交 commit 后可能会做出封版和发布前的一系列准备工作，而这些工作又包含了生成新的提交记录和 changelog 等内容，因此 `standard-version` 可以帮助我们便利的完成这些任务。
