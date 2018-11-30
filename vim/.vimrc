@@ -68,16 +68,51 @@
 " }
 
 
+" nerdcommenter
+" https://github.com/scrooloose/nerdcommenter
+" {
+    " Add spaces after comment delimiters by default
+    let g:NERDSpaceDelims = 1
+
+    " Use compact syntax for prettified multi-line comments
+    let g:NERDCompactSexyComs = 1
+
+    " Align line-wise comment delimiters flush left instead of following code indentation
+    let g:NERDDefaultAlign = 'left'
+
+    " Set a language to use its alternate delimiters by default
+    let g:NERDAltDelims_java = 1
+
+    " Add your own custom formats or override the defaults
+    let g:NERDCustomDelimiters = {
+    \   'c': { 'left': '/**','right': '*/' },
+    \   'javascript.jsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' }
+    \ }
+
+    " Allow commenting and inverting empty lines (useful when commenting a region)
+    let g:NERDCommentEmptyLines = 1
+
+    " Enable trimming of trailing whitespace when uncommenting
+    let g:NERDTrimTrailingWhitespace = 1
+
+    " Enable NERDCommenterToggle to check all selected lines is commented or not 
+    let g:NERDToggleCheckAllLines = 1
+" }
+
+
 " vim-airline
 " {
     let g:airline_powerline_fonts = 1
+
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
     let g:airline#extensions#tabline#formatter = 'default'
+
     let g:airline#extensions#tabline#show_tab_nr = 1
     let g:airline#extensions#tabline#tab_nr_type= 2
     let g:airline#extensions#tabline#show_tab_type = 1
+
     let g:airline_theme='lucius'
 " }
 
@@ -93,6 +128,8 @@
     " resolve conflict, disable [Syntastic] and [Eclim]
     let g:syntastic_java_checkers = []
     let g:EclimFileTypeValidate = 0
+
+    nnoremap <leader>jd :YcmCompleter GoTo<CR>
 " }
 
 
@@ -254,6 +291,9 @@
 
 
 " XML format
+" https://stackoverflow.com/questions/21408222/vim-indent-xml-file
+" @Birei's answer
+" gg=G
 " {
     au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 " }
@@ -272,6 +312,7 @@
 
     " NERDTREE persist only one
     map <Leader>n <plug>NERDTreeTabsToggle<CR>
+    map <Leader>f :NERDTreeFind<CR>
 
     map tb :tabe . <CR>
 " }
