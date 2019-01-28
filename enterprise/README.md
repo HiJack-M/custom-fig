@@ -8,7 +8,7 @@
 
 下方流程涉及咨询事项参考 [北京方面工商局及分局电话](https://zhidao.baidu.com/question/323921581.html)，该电话官网未提供具体明细，只能参考这里的百度词条。
 
-以下涉及具体流程解释和 tips 的内容参考来自 [知乎回答 @嵇可睿 回答](https://www.zhihu.com/question/19585093) 和 [知乎回答 @亚新通达公司注册](https://www.zhihu.com/question/54570629)
+以下涉及具体流程解释和 tips 的内容参考来自 [知乎回答@嵇可睿](https://www.zhihu.com/question/19585093) 和 [知乎回答@亚新通达公司注册](https://www.zhihu.com/question/54570629)
 
 ## 流程
 
