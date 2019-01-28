@@ -4,7 +4,7 @@ nginx:
     - "80:80"
     - "443:443"
   volumes:
-    - ./data/nginx.conf.https:/etc/nginx/nginx.conf:ro
+    - ./data/nginx.https.conf:/etc/nginx/nginx.conf:ro
     - /etc/letsencrypt/live/jovipro.com/fullchain.pem:/etc/nginx/ssl/jovipro.com.crt
     - /etc/letsencrypt/live/jovipro.com/privkey.pem:/etc/nginx/ssl/jovipro.com.key
   net: host
