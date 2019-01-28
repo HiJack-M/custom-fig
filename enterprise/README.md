@@ -109,3 +109,15 @@ __最后提供一份来自 [知乎](https://www.zhihu.com/question/54570629) 的
 ![issue1](./images/issue1.jpg)
 
 ![issue2](./images/issue2.jpg)
+
+
+## 代理信息
+
+以下信息均来自 Google 搜索，真实性还望真正咨询前自行考量。
+
+- [万企汇](http://jn.520gongsi.cn/)
+- [北京诺亚互动财务顾问有限公司](http://www.87793798.cn/)
+- [中投世纪](http://www.pinggu168.com/gongsizhuce/)
+- [腾讯创业服务平台](https://c.qq.com/cateTopic/view)
+
+
