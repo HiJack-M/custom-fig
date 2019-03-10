@@ -1,0 +1,39 @@
+" simple config with necessary requirement by using vim
+" ignore muliti no-useful dev plugin being installed
+" {
+    set number
+    set hls
+    set backspace=indent,eol,start
+    set autoindent
+    set smartindent
+
+    set ruler
+    set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+    set cindent
+    set showmatch
+    set showcmd
+    set magic
+
+    set sidescroll=5
+    set so=5
+    set softtabstop=4
+    set shiftwidth=4
+
+    set expandtab
+    set cursorcolumn
+    set cursorline
+    set incsearch
+
+    set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+    set termencoding=utf-8
+    set encoding=utf-8
+
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+" }
+
+
+" custom shortcut mapping
+" {
+    map gm :call cursor(0, len(getline('.'))/2) <CR>
+    map FG :set shiftwidth=2<CR>:set softtabstop=2<CR>
+" }
