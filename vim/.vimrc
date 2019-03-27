@@ -55,6 +55,13 @@
 " }
 
 
+" [.conf] file highlight
+" {
+    setf dosini
+    autocmd BufRead,BufNewFile logging.conf setf dosini
+" }
+
+
 " NERDTREE
 " {
     " Start NERDTree
@@ -131,7 +138,7 @@
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
-    let g:airline#extensions#tabline#formatter = 'default'
+    let g:airline#extensions#tabline#formatter = 'jsformatter'
 
     let g:airline#extensions#tabline#show_tab_nr = 1
     let g:airline#extensions#tabline#tab_nr_type= 2
@@ -153,6 +160,7 @@
     let g:syntastic_java_checkers = []
     let g:EclimFileTypeValidate = 0
 
+    " goto definition
     nnoremap <leader>jd :YcmCompleter GoTo<CR>
 " }
 
