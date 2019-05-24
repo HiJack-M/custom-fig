@@ -1,20 +1,77 @@
-" vim-pathogen
+" Vundle.vim
 " {
-    execute pathogen#infect()
-    syntax on
-    filetype plugin indent on
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
+
+    " set the runtime path to include Vundle and initialize
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    " let Vundle manage Vundle, required
+    Plugin 'VundleVim/Vundle.vim'
+
+    " plugins
+    " {
+        " capacity improved
+        Plugin 'flazz/vim-colorschemes'
+        Plugin 'vim-airline/vim-airline'
+        Plugin 'vim-airline/vim-airline-themes'
+        Plugin 'scrooloose/nerdtree'
+        Plugin 'jistr/vim-nerdtree-tabs'
+        Plugin 'Valloric/YouCompleteMe'
+        Plugin 'djoshea/vim-autoread'
+        Plugin 'danro/rename.vim'
+        Plugin 'tpope/vim-obsession'
+        Plugin 'kien/ctrlp.vim'
+        Plugin 'haya14busa/incsearch.vim'
+        Plugin 'henrik/vim-indexed-search'
+        Plugin 'jiangmiao/auto-pairs'
+        Plugin 'terryma/vim-multiple-cursors'
+
+        " extends
+        Plugin 'tpope/vim-fugitive'
+        Plugin 'scrooloose/nerdcommenter'
+        Plugin 'godlygeek/tabular'
+        Plugin 'plasticboy/vim-markdown'
+        Plugin 'chr4/nginx.vim'
+        Plugin 'cespare/vim-toml'
+        Plugin 'solarnz/thrift.vim'
+        Plugin 'tomlion/vim-solidity'
+        Plugin 'jrozner/vim-antlr'
+        Plugin 'maksimr/vim-jsbeautify'
+        Plugin 'moll/vim-node'
+        Plugin 'leafgarland/typescript-vim'
+        Plugin 'jpalardy/vim-slime'
+        " Plugin 'l04m33/vlime', {'rtp': 'vim/'}
+
+        " 3rd ecosystem
+        Plugin 'mattn/emmet-vim'
+        Plugin 'chemzqm/vim-jsx-improve'
+        Plugin 'mustache/vim-mustache-handlebars'
+        Plugin 'posva/vim-vue'
+        Plugin 'chemzqm/wxapp.vim'
+    " }
+
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
 " }
 
 
 " settings
 " {
+    set shell=/bin/sh
     set number
     set backspace=indent,eol,start
     set autoindent
     set smartindent
     set cindent
+    set incsearch
+    set smartcase
+    set cursorcolumn
+    set cursorline
     set showcmd
     set showmatch
+    set ignorecase
     set magic
 
     set softtabstop=4
@@ -25,24 +82,22 @@
     set so=5
     set expandtab
 
-    set hls 
-    set incsearch
-    set smartcase
-    set cursorcolumn
-    set cursorline
     set backupext=.bak
     set regexpengine=1
     set clipboard=unnamed
     set laststatus=2
-    set term=screen-256color
-    set ignorecase
+
     set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
     set termencoding=utf-8
     set encoding=utf-8
-    set background=dark
-    set previewheight=25    " vim-fugitive > GStatus height
 
+    set hls 
+    set background=dark
+    set term=screen-256color
     colorscheme gruvbox
+
+    set lisp                " lisp default autoindex
+    set previewheight=25    " vim-fugitive > GStatus height
 
     syntax on
     if &t_Co > 1
@@ -78,6 +133,7 @@
 " }
 
 
+" TODO exec PluginInstall must close NERDTree
 " NERDTree auto highlight
 " {
     " Check if NERDTree is open or active
@@ -217,6 +273,14 @@
     autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
     autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
     autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+" }
+
+
+" vim-slime
+" {
+    let g:slime_target = "tmux"
+    let g:slime_paste_file = "$HOME/.slime_paste"
+    let g:slime_python_ipython = 1
 " }
 
 
