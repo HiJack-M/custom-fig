@@ -5,8 +5,16 @@ mc:
   environment:
     - EULA=TRUE
     - JVM_OPTS=-Xmx512M -Xms512M
+    - SERVER_NAME=OP
+    - ICON=https://blog.jovipro.com/sites/default/files/server-icon.png
+    - OPS=EternalJovi
+    - WHITELIST=EternalJovi
+    - MAX_PLAYERS=5
+    - DIFFICULTY=hard
+    - ANNOUNCE_PLAYER_ACHIEVEMENTS=true
+    - ENABLE_COMMAND_BLOCK=true
+    - MAX_BUILD_HEIGHT=256
+    - SPAWN_ANIMALS=true
   volumes:
-    - ./server-icon.png:/data/server-icon.png
-    - ./config/ops.json:/data/ops.json
-    - ./config/whitelist.json:/data/whitelist.json
+    - ./data:/data
   restart: always
