@@ -118,9 +118,10 @@
 " }
 
 
-" fzf config
+" fzf
 " {
     set rtp+=/usr/local/opt/fzf
+    map <c-p> :FZF <CR>
 " }
 
 
@@ -202,12 +203,6 @@
     autocmd FileType javascript setlocal omnifunc=tern#Complete
 " }
  
-
-" fzf
-" {
-    map <c-p> :FZF <CR>
-" }
-
 
 " incsearch
 " {
