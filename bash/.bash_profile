@@ -15,26 +15,60 @@
 # }
 
 
+# addition env in .profile
+# {
+    source /Users/$USER/.profile
+# }
+
+
 # autojump
 # {
     . /usr/local/Cellar/autojump/22.5.3/share/autojump/autojump.bash
 # }
 
 
-# nvm
+# fzf
 # {
-    # slow official nvm load
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+    # Use ~~ as the trigger sequence instead of the default **
+    export FZF_COMPLETION_TRIGGER='~~'
+
+    # Options to fzf command
+    export FZF_COMPLETION_OPTS='+c -x'
+
+    # highlight
+    export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+
+    # Use fd (https://github.com/sharkdp/fd) instead of the default find
+    # command for listing path candidates.
+    # - The first argument to the function ($1) is the base path to start traversal
+    # - See the source code (completion.{bash,zsh}) for the details.
+    _fzf_compgen_path() {
+      fd --hidden --follow --exclude ".git" . "$1"
+    }
+
+    # Use fd to generate the list for directory completion
+    _fzf_compgen_dir() {
+      fd --type d --hidden --follow --exclude ".git" . "$1"
+    }
 # }
 
 
-# ruby
+# node.js
 # {
-    # rvm
+    # nvm [TODO disabled > use brew namespace node]
     # {
-        source /Users/$USER/.profile
+        # slow official nvm load
+        # export NVM_DIR="$HOME/.nvm"
+        # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+    # }
+
+    # yarn
+    # {
+        export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
     # }
 # }
 
@@ -52,6 +86,19 @@
     # {
         export WORKON_HOME=$HOME/.virtualenvs
         source /usr/local/bin/virtualenvwrapper.sh
+    # }
+# }
+
+
+# ruby
+# {
+    export PATH=/usr/local/Cellar/ruby/2.6.3/bin:$PATH
+
+    # rvm
+    # {
+    # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+        # export PATH="$PATH:$HOME/.rvm/bin"
+        # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
     # }
 # }
 
@@ -115,13 +162,26 @@
     alias proxyee-down="java -jar ~/github/network/proxyee-down/main/target/proxyee-down-main.jar"
     alias supervisorctl="supervisorctl -c /Users/$USER/fig/supervisor/supervisord.conf"
     alias ctags="`brew --prefix`/bin/ctags"
-    alias vps_vpn="ssh root@vpn.jovipro.com"
-    alias vps_cms="ssh root@cms.jovipro.com"
-    alias vps_hijack="ssh root@hijack.rocks"
-    alias vps_cms_by_proxy='ssh root@cms.jovipro.com -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"'
-    alias vps_hijack_by_proxy='ssh root@hijack.rocks -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"'
-    alias vps_liang="ssh root@www.devrl.com"
-    alias vps_ec="ssh apache@192.168.1.144 -p 932"
+
+    # vps
+    # {
+        alias ssh_saber="ssh root@saber.jovipro.com"
+        alias mosh_saber="mosh root@saber.jovipro.com"
+        alias ssh_archer="ssh root@archer.jovipro.com"
+        alias mosh_archer="mosh root@archer.jovipro.com"
+        alias ssh_rider="ssh root@rider.jovipro.com -p 29675"
+        alias mosh_rider='mosh root@rider.jovipro.com --ssh="ssh -p 29675"'
+        alias ssh_lancer="ssh root@106.13.17.126"
+        alias mosh_lancer="mosh root@106.13.17.126"
+        alias ssh_hijack="ssh root@hijack.rocks"
+        alias mosh_hijack="mosh root@hijack.rocks"
+        alias ssh_tian="ssh root@106.13.111.73"
+        alias mosh_tian="mosh root@106.13.111.73"
+        alias ssh_saber_by_archer='ssh root@cms.jovipro.com -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"'
+        alias ssh_liang="ssh root@www.devrl.com"
+        alias ssh_ec="ssh apache@192.168.1.144 -p 932"
+    # }
+
     alias vi="vim"
     alias fig="docker-compose"
 # }
