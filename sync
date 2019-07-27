@@ -1,0 +1,13 @@
+#!/bin/bash
+
+VIMRC=".vimrc"
+BASH_PROFILE=".bash_profile"
+GIT_CONFIG=".gitconfig"
+
+PATH_VIM="vim"
+PATH_BASH="bash"
+PATH_GIT="git"
+
+cp ~/$VIMRC ./$PATH_VIM/$VIMRC
+cp ~/$BASH_PROFILE ./$PATH_BASH/$BASH_PROFILE
+cp ~/$GIT_CONFIG ./$PATH_GIT/$GIT_CONFIG

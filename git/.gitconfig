@@ -1,0 +1,17 @@
+[user]
+	name = Eternal_Jovi
+	email = eternal.l.jovi@gmail.com
+[alias]
+	st = status
+	cm = commit
+	br = branch
+	co = checkout
+        parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
+	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
+[core]
+	editor = /usr/local/bin/vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

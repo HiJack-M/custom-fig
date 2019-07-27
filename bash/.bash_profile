@@ -151,7 +151,7 @@
 # [https://gist.github.com/shashankmehta/6ff13acd60f449eea6311cba4aae900a]
 
 
-# name
+# alias name
 # {
     # the fuck senmatic complete
     # eval "$(thefuck --alias f)"
@@ -162,6 +162,8 @@
     alias proxyee-down="java -jar ~/github/network/proxyee-down/main/target/proxyee-down-main.jar"
     alias supervisorctl="supervisorctl -c /Users/$USER/fig/supervisor/supervisord.conf"
     alias ctags="`brew --prefix`/bin/ctags"
+    alias vi="vim"
+    alias fig="docker-compose"
 
     # vps
     # {
@@ -181,9 +183,6 @@
         alias ssh_liang="ssh root@www.devrl.com"
         alias ssh_ec="ssh apache@192.168.1.144 -p 932"
     # }
-
-    alias vi="vim"
-    alias fig="docker-compose"
 # }
 
 
