@@ -2,12 +2,15 @@
 
 VIMRC=".vimrc"
 BASH_PROFILE=".bash_profile"
+TMUX_CONF=".tmux.conf"
 GIT_CONFIG=".gitconfig"
 
 PATH_VIM="vim"
 PATH_BASH="bash"
+PATH_TMUX="tmux"
 PATH_GIT="git"
 
 cp ~/$VIMRC ./$PATH_VIM/$VIMRC
 cp ~/$BASH_PROFILE ./$PATH_BASH/$BASH_PROFILE
+cp ~/$TMUX_CONF ./$PATH_TMUX/$TMUX_CONF
 cp ~/$GIT_CONFIG ./$PATH_GIT/$GIT_CONFIG
