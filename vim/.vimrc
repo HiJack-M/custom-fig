@@ -41,10 +41,11 @@
         Plugin 'maksimr/vim-jsbeautify'
         Plugin 'moll/vim-node'
         Plugin 'leafgarland/typescript-vim'
+        Plugin 'peitalin/vim-jsx-typescript'
+        Plugin 'chemzqm/vim-jsx-improve'
         " Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
         " 3rd ecosystem
-        Plugin 'chemzqm/vim-jsx-improve'
         Plugin 'mattn/emmet-vim'
         Plugin 'digitaltoad/vim-pug'
         Plugin 'mustache/vim-mustache-handlebars'
@@ -274,7 +275,9 @@
 " vim-jsbeautify
 " {
     " for javascript
-    autocmd FileType javascript noremap <buffer> <c-f> :call JsBeautify()<cr>
+    autocmd FileType javascript noremap <buffer> <c-f> :call JsxBeautify()<cr>
+    " for typescript
+    autocmd FileType typescript noremap <buffer> <c-f> :call JsxBeautify()<cr>
     " for json
     autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
     " for jsx
@@ -285,7 +288,8 @@
     autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
     " binding a function for js, html and css in visual mode on
-    autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+    autocmd FileType javascript vnoremap <buffer> <c-f> :call RangeJsBeautify()<cr>
+    autocmd FileType typescript vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
     autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
     autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
     autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>

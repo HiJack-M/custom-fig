@@ -189,3 +189,6 @@
 # removed all the duplicates $PATH
 # @SherylHohman [https://superuser.com/questions/449636/path-is-filled-with-duplicates]
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++  } split(/:/, $ENV{PATH}))')"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
