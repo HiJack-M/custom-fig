@@ -21,7 +21,7 @@
         Plugin 'djoshea/vim-autoread'
         Plugin 'danro/rename.vim'
         Plugin 'tpope/vim-obsession'
-        " Plugin 'kien/ctrlp.vim'   " [discard] replaced by fzf
+        " Plugin 'kien/ctrlp.vim'
         Plugin 'haya14busa/incsearch.vim'
         Plugin 'henrik/vim-indexed-search'
         Plugin 'jiangmiao/auto-pairs'
@@ -119,7 +119,7 @@
 " }
 
 
-" fzf
+" fzf [disabled]
 " {
     set rtp+=/usr/local/opt/fzf
     map <c-p> :FZF <CR>

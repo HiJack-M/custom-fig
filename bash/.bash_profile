@@ -12,6 +12,9 @@
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
       . $(brew --prefix)/etc/bash_completion
     fi
+
+    # enable globstar [**/*]
+    shopt -s globstar
 # }
 
 
@@ -30,6 +33,8 @@
 # fzf
 # {
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+    export FZF_DEFAULT_COMMAND='find .'
 
     # Use ~~ as the trigger sequence instead of the default **
     export FZF_COMPLETION_TRIGGER='~~'
@@ -156,7 +161,7 @@
     # the fuck senmatic complete
     # eval "$(thefuck --alias f)"
     alias l="ls"
-    alias ll="ls -l"
+    alias ll='ls -lht'
     alias la="ls -a"
     alias pc="proxychains4 -f ~/.proxychains.conf"
     alias proxyee-down="java -jar ~/github/network/proxyee-down/main/target/proxyee-down-main.jar"
@@ -167,21 +172,48 @@
 
     # vps
     # {
-        alias ssh_saber="ssh root@saber.jovipro.com"
-        alias mosh_saber="mosh root@saber.jovipro.com"
-        alias ssh_archer="ssh root@archer.jovipro.com"
-        alias mosh_archer="mosh root@archer.jovipro.com"
-        alias ssh_rider="ssh root@rider.jovipro.com -p 29675"
-        alias mosh_rider='mosh root@rider.jovipro.com --ssh="ssh -p 29675"'
-        alias ssh_lancer="ssh root@106.13.17.126"
-        alias mosh_lancer="mosh root@106.13.17.126"
-        alias ssh_hijack="ssh root@hijack.rocks"
-        alias mosh_hijack="mosh root@hijack.rocks"
-        alias ssh_tian="ssh root@106.13.111.73"
-        alias mosh_tian="mosh root@106.13.111.73"
-        alias ssh_saber_by_archer='ssh root@cms.jovipro.com -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"'
-        alias ssh_liang="ssh root@www.devrl.com"
-        alias ssh_ec="ssh apache@192.168.1.144 -p 932"
+        function sshome() {
+            if [ "$1" = 'rider' ]
+            then
+                ssh root@rider.jovipro.com -p 29675
+            elif [ "$1" = 'lancer' ]
+            then
+                ssh root@106.13.17.126
+            elif [ "$1" = 'hijack' ]
+            then
+                ssh root@hijack.rocks
+            elif [ "$1" = 'liang' ]
+            then
+                ssh root@www.devrl.com
+            elif [ "$1" = 'ec' ]
+            then
+                ssh apache@192.168.1.144 -p 932
+            else
+                ssh root@$1.jovipro.com
+            fi
+        }
+
+        function moshome() {
+            if [ "$1" = 'rider' ]
+            then
+                mosh root@rider.jovipro.com --ssh="ssh -p 29675"
+            elif [ "$1" = 'lancer' ]
+            then
+                mosh root@106.13.17.126
+            elif [ "$1" = 'hijack' ]
+            then
+                mosh root@hijack.rocks
+            elif [ "$1" = 'tian' ]
+            then
+                mosh root@106.13.111.73
+            else
+                mosh root@$1.jovipro.com
+            fi
+        }
+
+        function sshproxy() {
+            ssh root@$1.jovipro.com -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"
+        }
     # }
 # }
 
