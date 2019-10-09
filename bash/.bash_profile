@@ -24,6 +24,12 @@
 # }
 
 
+# iterm2
+# {
+    test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+# }
+
+
 # autojump
 # {
     . /usr/local/Cellar/autojump/22.5.3/share/autojump/autojump.bash
@@ -212,7 +218,12 @@
         }
 
         function sshproxy() {
-            ssh root@$1.jovipro.com -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"
+            if [ "$1" = 'rider' ]
+            then
+                ssh root@$1.jovipro.com -p 29675 -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"
+            else
+                ssh root@$1.jovipro.com -o "ProxyCommand=nc -X 5 -x 127.0.0.1:1082 %h %p"
+            fi
         }
     # }
 # }
@@ -221,6 +232,3 @@
 # removed all the duplicates $PATH
 # @SherylHohman [https://superuser.com/questions/449636/path-is-filled-with-duplicates]
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++  } split(/:/, $ENV{PATH}))')"
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-

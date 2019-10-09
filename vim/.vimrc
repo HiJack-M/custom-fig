@@ -119,7 +119,7 @@
 " }
 
 
-" fzf [disabled]
+" fzf
 " {
     set rtp+=/usr/local/opt/fzf
     map <c-p> :FZF <CR>
