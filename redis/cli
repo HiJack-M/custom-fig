@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# docker via env
+# {
+    docker run -it --network redis_default --rm redis redis-cli -h redis
+# }
+
+
+# docker via link between containers
+# {
+    # docker run -it --link redis_redis-server_1:redis --rm redis redis-cli -h redis -p 6379
+# }

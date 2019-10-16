@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
+      - ./data:/var/lib/mysql
+      - ~/github/private/exer-mock/test-data/mysql:/tmp
+    environment:
+      MYSQL_ROOT_PASSWORD: vi
+    ports:
+      - "3306:3306"
+    restart: always

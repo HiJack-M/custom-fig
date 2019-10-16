@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# mycli
+# [brew install mycli]
+# {
+    mycli -h "127.0.0.1" -P 3306 -u "root" -p "vi" -D "noob"
+# }
+
+
+# mysql-shell
+# [brew cask install mysql-shell]
+# {
+    # mysqlsh -h"localhost" -P"3306" -u"root" -p"vi" --database="noob" --sqlc
+# }
+
+
+# docker via env
+# {
+    # docker run -it --network mysql_default --rm mysql mysql -hmysql -uroot -p
+# }
+
+
+# docker via link between containers
+# {
+    # docker run -it --link mysql_mysql-server_1:mysql --rm mysql sh -c \
+    #    'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+# }
