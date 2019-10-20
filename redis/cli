@@ -1,8 +1,42 @@
 #!/bin/bash
 
+# docker cluster via env
+# [bitnami/redis]
+# {
+
+# }
+
+
+# redis-cli 
+# [brew tap ringohub/redis-cli]
+# [brew install redis-cli]
+# {
+    if [ "$1" = master ]
+    then
+        redis-cli -p 6300 -a saber
+    else
+        redis-cli -p "630$1" -a lancelot
+    fi
+# }
+
+
+# docker master/slaver via env
+# {
+    # if [ "$1" = 'master' ]
+    # then
+    #     docker run -it --network redis_default --rm redis redis-cli -h redis_master -a "cat"
+    # elif [ "$1" = 'slaver' ]
+    # then
+    #     docker run -it --network redis_default --rm redis redis-cli -h redis_slaver -a "panda"
+    # else
+    #     echo "Please provide target.    master/slaver"
+    # fi
+# }
+
+
 # docker via env
 # {
-    docker run -it --network redis_default --rm redis redis-cli -h redis
+    # docker run -it --network redis_default --rm redis redis-cli -h redis
 # }
 
 

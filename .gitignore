@@ -9,3 +9,7 @@
 
 # node.js
 node_modules/
+
+# Redis
+*.rdb
+*.aof
