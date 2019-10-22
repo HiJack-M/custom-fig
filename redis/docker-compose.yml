@@ -10,7 +10,7 @@ services:
     networks:
       - cache_network
     ports:
-      - '6300:6379'
+      - '6379'
     environment:
       - REDIS_REPLICATION_MODE=master
       - REDIS_PASSWORD=saber
@@ -18,12 +18,12 @@ services:
       - './data/master:/bitnami'
     restart: always
 
-  redis_replica_1:
+  redis_replica:
     image: 'bitnami/redis:latest'
     networks:
       - cache_network
     ports:
-      - '6301:6379'
+      - '6379'
     depends_on:
       - redis_master
     environment:
@@ -33,23 +33,5 @@ services:
       - REDIS_MASTER_PASSWORD=saber
       - REDIS_PASSWORD=lancelot
     volumes:
-      - './data/replica_1:/bitnami'
-    restart: always
-
-  redis_replica_2:
-    image: 'bitnami/redis:latest'
-    networks:
-      - cache_network
-    ports:
-      - '6302:6379'
-    depends_on:
-      - redis_master
-    environment:
-      - REDIS_REPLICATION_MODE=slave
-      - REDIS_MASTER_HOST=redis_master
-      - REDIS_MASTER_PORT_NUMBER=6379
-      - REDIS_MASTER_PASSWORD=saber
-      - REDIS_PASSWORD=lancelot
-    volumes:
-      - './data/replica_2:/bitnami'
+      - './data/replica:/bitnami'
     restart: always
