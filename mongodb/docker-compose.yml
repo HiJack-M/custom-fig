@@ -1,0 +1,23 @@
+version: '3'
+
+networks:
+  bucket_network:
+    driver: bridge
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    networks:
+      - bucket_network
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=jovi
+      - MONGO_INITDB_ROOT_PASSWORD=emacs
+      - MONGO_INITDB_DATABASE=noob
+    volumes:
+      - ./mongod.conf:/etc/mongod.conf:ro
+      - ./data:/data/db
+    command: ['mongod', '--auth']
+    restart: always

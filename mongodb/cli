@@ -1,7 +1,28 @@
 #!/bin/bash
 
+# mongodb-community-shell
+# [brew install mongodb-community-shell] [https://dba.stackexchange.com/questions/196330/is-it-possible-to-install-just-the-mongo-shell]
+#
+# mongo-hacker [MongoDB Shell Enhancements]
+# [yarn global add mongo-hacker] [https://github.com/TylerBrock/mongo-hacker]
+# {
+    mongo noob -u jovi -p emacs --authenticationDatabase 'admin'
+# }
+
+
+# docker cli via env
+# {
+    # docker run -it --rm --network mongodb_bucket_network mongo \
+    #   mongo --host mongo \
+    #       -u jovi \
+    #       -p emacs \
+    #       --authenticationDatabase admin \
+    #       noob
+# }
+
+
 # mongo shell
 # [brew install mongodb-community]
 # {
-    # mongo --port 39504 -u jovi -p vi --authenticationDatabase "admin"
+    # mongo --port 39504 -u jovi -p vi --authenticationDatabase 'admin'
 # }
