@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# start server via os x mongodb server bin
+# [brew install mongodb-community]
+# {
+    mongod --auth --bind_ip 127.0.0.1 --port 39504 --dbpath /Users/jovi/fig/mongodb/data
+# }

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # docker cluster via env
-# [bitnami/redis]
+# [bitnami/redis] [https://hub.docker.com/r/bitnami/redis/]
 # {
-
+    redis-cli -p 6300 -a saber
 # }
 
 
@@ -11,12 +11,12 @@
 # [brew tap ringohub/redis-cli]
 # [brew install redis-cli]
 # {
-    if [ "$1" = master ]
-    then
-        redis-cli -p 6300 -a saber
-    else
-        redis-cli -p "630$1" -a lancelot
-    fi
+    # if [ "$1" = 0 ]     # master
+    # then
+    #     redis-cli -p 6300 -a saber
+    # else
+    #     redis-cli -p "630$1" -a lancelot
+    # fi
 # }
 
 
