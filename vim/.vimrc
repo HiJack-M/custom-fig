@@ -153,6 +153,10 @@
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    " auto refresh nerdtree
+    " [https://stackoverflow.com/questions/8584182/how-to-refresh-in-nerdtree-plugin]
+    autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+
     let NERDTreeShowHidden=1
     let g:NERDTreeWinPos = "left"
     let g:NERDTreeWinSize = 20
@@ -176,7 +180,7 @@
     endfunction
 
     " Highlight currently open buffer in NERDTree
-    autocmd BufEnter * call SyncTree()
+    autocmd BufEnter,CursorHold,CursorHoldI * call SyncTree()
 " }
 
 

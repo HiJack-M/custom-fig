@@ -178,27 +178,6 @@
 
     # vps
     # {
-        function sshome() {
-            if [ "$1" = 'rider' ]
-            then
-                ssh root@rider.jovipro.com -p 29675
-            elif [ "$1" = 'lancer' ]
-            then
-                ssh root@106.13.17.126
-            elif [ "$1" = 'hijack' ]
-            then
-                ssh root@hijack.rocks
-            elif [ "$1" = 'liang' ]
-            then
-                ssh root@www.devrl.com
-            elif [ "$1" = 'ec' ]
-            then
-                ssh apache@192.168.1.144 -p 932
-            else
-                ssh root@$1.jovipro.com
-            fi
-        }
-
         function moshome() {
             if [ "$1" = 'rider' ]
             then
