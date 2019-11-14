@@ -122,7 +122,16 @@
 " fzf
 " {
     set rtp+=/usr/local/opt/fzf
+    Plugin 'junegunn/fzf.vim'
     map <c-p> :FZF <CR>
+    map <c-x> :Ag! <CR>
+
+    command! -bang -nargs=* Ag
+      \ call fzf#vim#ag(
+      \   '',
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
 " }
 
 
@@ -155,7 +164,7 @@
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     " auto refresh nerdtree
     " [https://stackoverflow.com/questions/8584182/how-to-refresh-in-nerdtree-plugin]
-    autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
+    " autocmd CursorHold,CursorHoldI * call NERDTreeFocus() | call g:NERDTree.ForCurrentTab().getRoot().refresh() | call g:NERDTree.ForCurrentTab().render() | wincmd w
 
     let NERDTreeShowHidden=1
     let g:NERDTreeWinPos = "left"
