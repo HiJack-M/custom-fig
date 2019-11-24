@@ -30,9 +30,16 @@
 # }
 
 
-# autojump
+# autojump [discard]
+# alternative [z]
 # {
-    . /usr/local/Cellar/autojump/22.5.3/share/autojump/autojump.bash
+    # . /usr/local/Cellar/autojump/22.5.3/share/autojump/autojump.bash
+# }
+
+
+# z
+# {
+    [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
 # }
 
 
