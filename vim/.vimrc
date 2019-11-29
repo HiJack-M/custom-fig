@@ -43,6 +43,7 @@
         Plugin 'leafgarland/typescript-vim'
         Plugin 'peitalin/vim-jsx-typescript'
         Plugin 'chemzqm/vim-jsx-improve'
+        Plugin 'heavenshell/vim-jsdoc'
         " Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
         " 3rd ecosystem
@@ -340,6 +341,14 @@
     let g:javascript_conceal_super                = "Ω"
     let g:javascript_conceal_arrow_function       = "⇒"
     set conceallevel=1
+" }
+
+
+" jsdoc
+" {
+    nmap <silent> <C-j> <Plug>(jsdoc)
+
+    let g:jsdoc_input_description = 1
 " }
 
 
