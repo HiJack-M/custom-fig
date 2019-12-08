@@ -1,16 +1,19 @@
 #!/bin/bash
 
-VIMRC=".vimrc"
 BASH_PROFILE=".bash_profile"
+SSH_CONFIG=".ssh/config"
 TMUX_CONF=".tmux.conf"
+VIMRC=".vimrc"
 GIT_CONFIG=".gitconfig"
 
-PATH_VIM="vim"
 PATH_BASH="bash"
+PATH_SSH="ssh"
 PATH_TMUX="tmux"
+PATH_VIM="vim"
 PATH_GIT="git"
 
-cp ~/$VIMRC ./$PATH_VIM/$VIMRC
 cp ~/$BASH_PROFILE ./$PATH_BASH/$BASH_PROFILE
+cp ~/$SSH_CONFIG ./$PATH_SSH/$SSH_CONFIG
 cp ~/$TMUX_CONF ./$PATH_TMUX/$TMUX_CONF
+cp ~/$VIMRC ./$PATH_VIM/$VIMRC
 cp ~/$GIT_CONFIG ./$PATH_GIT/$GIT_CONFIG

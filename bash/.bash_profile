@@ -185,24 +185,6 @@
 
     # vps
     # {
-        function moshome() {
-            if [ "$1" = 'rider' ]
-            then
-                mosh root@rider.jovipro.com --ssh="ssh -p 29675"
-            elif [ "$1" = 'lancer' ]
-            then
-                mosh root@106.13.17.126
-            elif [ "$1" = 'hijack' ]
-            then
-                mosh root@hijack.rocks
-            elif [ "$1" = 'tian' ]
-            then
-                mosh root@106.13.111.73
-            else
-                mosh root@$1.jovipro.com
-            fi
-        }
-
         function sshproxy() {
             if [ "$1" = 'rider' ]
             then
