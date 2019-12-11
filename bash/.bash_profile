@@ -37,9 +37,24 @@
 # }
 
 
-# z
+# z [discard]
+# alternative [fasd]
 # {
-    [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+    # [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+# }
+
+
+# fasd
+# {
+    fasd_cache="$HOME/.fasd-init-bash"
+    if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+        fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+    fi
+    source "$fasd_cache"
+    unset fasd_cache
+
+    alias v='f -e vim'  # quick opening files with vim
+    alias o='a -e open' # quick opening files with xdg-open
 # }
 
 
@@ -173,15 +188,6 @@
 # {
     # the fuck senmatic complete
     # eval "$(thefuck --alias f)"
-    alias l="ls"
-    alias ll='ls -lht'
-    alias la="ls -a"
-    alias pc="proxychains4 -f ~/.proxychains.conf"
-    alias proxyee-down="java -jar ~/github/network/proxyee-down/main/target/proxyee-down-main.jar"
-    alias supervisorctl="supervisorctl -c /Users/$USER/fig/supervisor/supervisord.conf"
-    alias ctags="`brew --prefix`/bin/ctags"
-    alias vi="vim"
-    alias fig="docker-compose"
 
     # vps
     # {
@@ -194,6 +200,16 @@
             fi
         }
     # }
+
+    alias l="ls"
+    alias ll='ls -lht'
+    alias la="ls -a"
+    alias pc="proxychains4 -f ~/.proxychains.conf"
+    alias proxyee-down="java -jar ~/github/network/proxyee-down/main/target/proxyee-down-main.jar"
+    alias supervisorctl="supervisorctl -c /Users/$USER/fig/supervisor/supervisord.conf"
+    alias ctags="`brew --prefix`/bin/ctags"
+    alias vi="vim"
+    alias fig="docker-compose"
 # }
 
 
