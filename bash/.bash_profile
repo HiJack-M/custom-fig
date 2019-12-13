@@ -53,6 +53,7 @@
     source "$fasd_cache"
     unset fasd_cache
 
+    alias j='fasd_cd -d'
     alias v='f -e vim'  # quick opening files with vim
     alias o='a -e open' # quick opening files with xdg-open
 # }
