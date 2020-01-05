@@ -1,57 +1,70 @@
 " Vundle.vim
 " {
-    set nocompatible              " be iMproved, required
-    filetype off                  " required
+    set nocompatible
+    filetype off
 
-    " set the runtime path to include Vundle and initialize
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
-    " let Vundle manage Vundle, required
     Plugin 'VundleVim/Vundle.vim'
 
     " plugins
     " {
-        " capacity improved
+        " genneral appearance config
         Plugin 'flazz/vim-colorschemes'
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
-        Plugin 'scrooloose/nerdtree'
-        Plugin 'jistr/vim-nerdtree-tabs'
-        Plugin 'Valloric/YouCompleteMe'
-        Plugin 'djoshea/vim-autoread'
-        Plugin 'danro/rename.vim'
-        Plugin 'tpope/vim-obsession'
-        " Plugin 'kien/ctrlp.vim'
-        Plugin 'haya14busa/incsearch.vim'
-        Plugin 'henrik/vim-indexed-search'
-        Plugin 'jiangmiao/auto-pairs'
-        Plugin 'terryma/vim-multiple-cursors'
 
-        " extends
-        Plugin 'tpope/vim-fugitive'
-        Plugin 'scrooloose/nerdcommenter'
-        Plugin 'godlygeek/tabular'
-        Plugin 'plasticboy/vim-markdown'
-        Plugin 'chr4/nginx.vim'
-        Plugin 'cespare/vim-toml'
-        Plugin 'solarnz/thrift.vim'
-        Plugin 'tomlion/vim-solidity'
-        Plugin 'jrozner/vim-antlr'
-        Plugin 'jpalardy/vim-slime'
-        Plugin 'maksimr/vim-jsbeautify'
-        Plugin 'moll/vim-node'
-        Plugin 'leafgarland/typescript-vim'
-        Plugin 'peitalin/vim-jsx-typescript'
-        Plugin 'chemzqm/vim-jsx-improve'
-        Plugin 'heavenshell/vim-jsdoc'
-        " Plugin 'l04m33/vlime', {'rtp': 'vim/'}
+        " text edit capacity improved
+        " {
+            Plugin 'haya14busa/incsearch.vim'
+            Plugin 'henrik/vim-indexed-search'
+            Plugin 'jiangmiao/auto-pairs'
+            Plugin 'terryma/vim-multiple-cursors'
+            Plugin 'godlygeek/tabular'
+        " }
 
-        " 3rd ecosystem
-        Plugin 'mattn/emmet-vim'
-        Plugin 'digitaltoad/vim-pug'
-        Plugin 'mustache/vim-mustache-handlebars'
-        Plugin 'posva/vim-vue'
-        Plugin 'chemzqm/wxapp.vim'
+        " env of system & files improved
+        " {
+            Plugin 'scrooloose/nerdtree'
+            Plugin 'jistr/vim-nerdtree-tabs'
+            Plugin 'djoshea/vim-autoread'
+            Plugin 'danro/rename.vim'
+            Plugin 'tpope/vim-obsession'
+            " Plugin 'kien/ctrlp.vim'   " alternative [fzf]
+        " }
+
+        " lang syntax support
+        " {
+            Plugin 'Valloric/YouCompleteMe'
+            Plugin 'scrooloose/nerdcommenter'
+            Plugin 'tpope/vim-fugitive'
+            Plugin 'plasticboy/vim-markdown'
+            Plugin 'chr4/nginx.vim'
+            Plugin 'cespare/vim-toml'
+            Plugin 'solarnz/thrift.vim'
+            Plugin 'tomlion/vim-solidity'
+            Plugin 'jrozner/vim-antlr'
+            Plugin 'jpalardy/vim-slime'
+            Plugin 'dearrrfish/vim-applescript'
+            Plugin 'StanAngeloff/php.vim'
+
+            " javascript ecology
+            " {
+                Plugin 'moll/vim-node'
+                Plugin 'leafgarland/typescript-vim'
+                Plugin 'peitalin/vim-jsx-typescript'
+                Plugin 'chemzqm/vim-jsx-improve'
+                Plugin 'maksimr/vim-jsbeautify'
+                Plugin 'heavenshell/vim-jsdoc'
+            " }
+
+            " Plugin 'l04m33/vlime', {'rtp': 'vim/'}
+            Plugin 'mattn/emmet-vim'
+            Plugin 'digitaltoad/vim-pug'
+            Plugin 'mustache/vim-mustache-handlebars'
+            Plugin 'posva/vim-vue'
+            Plugin 'chemzqm/wxapp.vim'
+        " }
     " }
 
     " All of your Plugins must be added before the following line
