@@ -45,6 +45,7 @@
             Plugin 'tomlion/vim-solidity'
             Plugin 'jrozner/vim-antlr'
             Plugin 'jpalardy/vim-slime'
+            Plugin 'tenghui0425/jce-highlight'
             Plugin 'dearrrfish/vim-applescript'
             Plugin 'StanAngeloff/php.vim'
 
