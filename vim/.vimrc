@@ -57,6 +57,7 @@
                 Plugin 'chemzqm/vim-jsx-improve'
                 Plugin 'maksimr/vim-jsbeautify'
                 Plugin 'heavenshell/vim-jsdoc'
+                Plugin 'editorconfig/editorconfig-vim'
             " }
 
             " Plugin 'l04m33/vlime', {'rtp': 'vim/'}
@@ -366,6 +367,12 @@
 " }
 
 
+" editorconfig
+" {
+    let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+" }
+
+
 " emmet-vim
 " {
     let g:user_emmet_mode='a'    "enable all function in all mode.
@@ -438,7 +445,7 @@
 
 " auto complete python file header
 " {
-    au BufNewFile *.py 0r /Users/jovi/.vim/python.header.template
+    au BufNewFile *.py 0r $HOME/.vim/python.header.template
 " }
 
 
