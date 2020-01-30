@@ -46,12 +46,17 @@
 
 # fasd
 # {
-    fasd_cache="$HOME/.fasd-init-bash"
-    if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
-        fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
-    fi
-    source "$fasd_cache"
-    unset fasd_cache
+    # cache fasd init code if you want minimal overhead
+    # [discard] can't always remember path which entered
+    # https://github.com/clvv/fasd
+    # fasd_cache="$HOME/.fasd-init-bash"
+    # if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+    #     fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+    # fi
+    # source "$fasd_cache"
+    # unset fasd_cache
+
+    eval "$(fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install)"
 
     alias j='fasd_cd -d'
     alias v='f -e vim'  # quick opening files with vim

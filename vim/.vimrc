@@ -109,7 +109,7 @@
     set termencoding=utf-8
     set encoding=utf-8
 
-    set hls 
+    set hls
     set background=dark
     set term=screen-256color
     colorscheme gruvbox
@@ -184,14 +184,14 @@
 
     let NERDTreeShowHidden=1
     let g:NERDTreeWinPos = "left"
-    let g:NERDTreeWinSize = 20
+    let g:NERDTreeWinSize = 25
 " }
 
 
 " NERDTree auto highlight (FIXME exec PluginInstall must close NERDTree)
 " {
     " Check if NERDTree is open or active
-    function! IsNERDTreeOpen()        
+    function! IsNERDTreeOpen()
       return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
     endfunction
 
@@ -211,7 +211,7 @@
 
 " YouCompleteMe
 " {
-    let g:ycm_min_num_of_chars_for_completion = 3 
+    let g:ycm_min_num_of_chars_for_completion = 3
     let g:ycm_autoclose_preview_window_after_completion=1
     let g:ycm_complete_in_comments = 1
     let g:ycm_key_list_select_completion = ['<c-n>', '<Down>', '<tab>']
@@ -232,7 +232,7 @@
     let tern_show_argument_hints = 'on_hold'
     autocmd FileType javascript setlocal omnifunc=tern#Complete
 " }
- 
+
 
 " incsearch
 " {
@@ -269,7 +269,7 @@
     " Enable trimming of trailing whitespace when uncommenting
     let g:NERDTrimTrailingWhitespace = 1
 
-    " Enable NERDCommenterToggle to check all selected lines is commented or not 
+    " Enable NERDCommenterToggle to check all selected lines is commented or not
     let g:NERDToggleCheckAllLines = 1
 " }
 
@@ -422,7 +422,7 @@
     \ },
     \}
 " }
- 
+
 
 " vim-mustache-handlebars
 " {
@@ -438,7 +438,7 @@
 
 " wxapp
 " {
-    let g:neomake_wxss_enabled_makers = ['stylelint'] 
+    let g:neomake_wxss_enabled_makers = ['stylelint']
     let g:neomake_wxml_enabled_makers = ['tidy']
 " }
 
